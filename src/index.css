@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-maroon: #7A3232;
+  --color-cream-dark: #F4F0E6;
+  --color-beige: #E8E2D5;
+  --font-sans: 'Helvetica Neue', Arial, 'Outfit', sans-serif;
+  --font-serif: 'Georgia', serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: #FDFBF7;
+    color: #4A423C;
+}
+
+/* Marquee Animation for Testimonials */
+.marquee-container {
+    display: flex;
+    width: fit-content;
+    animation: marquee 50s linear infinite;
+}
+.marquee-container:hover {
+    animation-play-state: paused;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
