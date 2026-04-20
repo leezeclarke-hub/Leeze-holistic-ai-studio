@@ -416,39 +416,71 @@ export default function App() {
                   {/* Set 1 */}
                   <div className="flex gap-8">
                       <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I finally understand my body. The structure provided completely changed my approach to health and wellbeing."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Sarah M.</p>
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"You are talented, I learned so much from you, your presentation and influence is great. I learn from your passion in practicing in your lifestyle. Thank you Coach"</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Susan A. (Atomy Center Leader)</p>
                       </div>
                       <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"After years of fatigue, I have my energy back. The 1:1 consultation was an absolute game changer for my hormones."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Aisha K.</p>
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Coach Zainab inspired me to start my healthy eating habit. I usually struggle a lot with being consistent especially I am selective and sensitive when it comes to food changes or trying new meals outside my culture. Each time I have a session with her I get super excited at how she takes me through the process."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Umami F.</p>
+                      </div>
+                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"The cleanse protocol is amazing! I feel so much lighter and more energy. Thank you so much for the guidance! Jazak Allah khair. I told my mom, my cousins and my friends to join as this is sooo good mashaAllah"</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Noor H.</p>
+                      </div>
+                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I expected general health advice, something I genuinely needed. What I received, however, was so much more. Coach Zainab created a warm, encouraging, and attentive space where I was able to engage in deep introspection and self-discovery."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Sarah M. (English Tutor)</p>
+                      </div>
+                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I want to appreciate you Coach Zainab for helping me and changing my way of life/living/view, JUST EVERYTHING. You are the greatest influence that have ever happened to me."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Salma M. (Dentist)</p>
+                      </div>
+                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Thank you for the inspiring coaching. I’ve learned so much, and I know this journey is just the beginning. Conversations like these help me see things differently and reconnect with myself, my health, my habits, and my daily routine."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Darya K. (Model @darya.ionic)</p>
                       </div>
                       <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
                           <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Coach Jay helped me build physical strength and mental clarity. Highly recommend the LEEZE method."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Omar R.</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Shafiq R.</p>
                       </div>
                       <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"The most comprehensive holistic approach I have ever experienced. I finally feel in tune with my digestion and rhythm."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Elena P.</p>
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I had no idea what holistic was back then. Now I am starting to follow holistic approaches."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Clarissa H.</p>
                       </div>
                   </div>
                   {/* Set 2 (Duplicate for continuous scroll) */}
                   <div className="flex gap-8">
                       <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I finally understand my body. The structure provided completely changed my approach to health and wellbeing."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Sarah M.</p>
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"You are talented, I learned so much from you, your presentation and influence is great. I learn from your passion in practicing in your lifestyle. Thank you Coach"</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Susan A. (Atomy Center Leader)</p>
                       </div>
                       <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"After years of fatigue, I have my energy back. The 1:1 consultation was an absolute game changer for my hormones."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Aisha K.</p>
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Coach Zainab inspired me to start my healthy eating habit. I usually struggle a lot with being consistent especially I am selective and sensitive when it comes to food changes or trying new meals outside my culture. Each time I have a session with her I get super excited at how she takes me through the process."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Umami F.</p>
+                      </div>
+                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"The cleanse protocol is amazing! I feel so much lighter and more energy. Thank you so much for the guidance! Jazak Allah khair. I told my mom, my cousins and my friends to join as this is sooo good mashaAllah"</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Noor H.</p>
+                      </div>
+                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I expected general health advice, something I genuinely needed. What I received, however, was so much more. Coach Zainab created a warm, encouraging, and attentive space where I was able to engage in deep introspection and self-discovery."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Sarah M. (English Tutor)</p>
+                      </div>
+                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I want to appreciate you Coach Zainab for helping me and changing my way of life/living/view, JUST EVERYTHING. You are the greatest influence that have ever happened to me."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Salma M. (Dentist)</p>
+                      </div>
+                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Thank you for the inspiring coaching. I’ve learned so much, and I know this journey is just the beginning. Conversations like these help me see things differently and reconnect with myself, my health, my habits, and my daily routine."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Darya K. (Model @darya.ionic)</p>
                       </div>
                       <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
                           <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Coach Jay helped me build physical strength and mental clarity. Highly recommend the LEEZE method."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Omar R.</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Shafiq R.</p>
                       </div>
                       <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"The most comprehensive holistic approach I have ever experienced. I finally feel in tune with my digestion and rhythm."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Elena P.</p>
+                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I had no idea what holistic was back then. Now I am starting to follow holistic approaches."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Clarissa H.</p>
                       </div>
                   </div>
               </div>
