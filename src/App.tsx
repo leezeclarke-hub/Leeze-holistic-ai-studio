@@ -3,11 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ChatAssistant from './components/ChatAssistant';
-import { Leaf, ArrowRight, Menu, Globe, Phone, Info } from 'lucide-react';
+import { Leaf, ArrowRight, Menu, Globe, Phone, Info, Play, X } from 'lucide-react';
 
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
     const observerOptions = {
         root: null,
@@ -50,11 +51,24 @@ export default function App() {
               <a href="https://wa.link/gwlgym" className="hidden md:inline-flex px-6 py-2.5 border border-maroon text-maroon text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-colors">
                   Book a Call
               </a>
-              <button className="md:hidden text-maroon">
-                  <Menu size={28} />
+              <button className="md:hidden text-maroon relative z-50 p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
           </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 bg-[#FDFBF7] z-40 transition-transform duration-500 pt-32 px-6 flex flex-col justify-start md:hidden ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+          <div className="flex flex-col gap-10 text-center text-sm uppercase tracking-[0.2em] font-semibold text-[#4A423C]">
+              <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-maroon transition-colors py-2">About</a>
+              <a href="#method" onClick={() => setIsMenuOpen(false)} className="hover:text-maroon transition-colors py-2">Method</a>
+              <a href="#services" onClick={() => setIsMenuOpen(false)} className="hover:text-maroon transition-colors py-2">Services</a>
+              <a href="#coaches" onClick={() => setIsMenuOpen(false)} className="hover:text-maroon transition-colors py-2">Coaches</a>
+              <a href="https://wa.link/gwlgym" onClick={() => setIsMenuOpen(false)} className="mt-4 px-8 py-4 bg-maroon text-white text-[10px] uppercase tracking-[0.2em] font-bold self-center shadow-lg shadow-maroon/20 hover:bg-[#5A2424] transition-all duration-700 w-full max-w-xs">
+                  Book a Call
+              </a>
+          </div>
+      </div>
 
       {/* Hero Section */}
       <section className="relative flex-grow flex flex-col items-center justify-center p-6 md:p-12 pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden text-center">
@@ -63,7 +77,7 @@ export default function App() {
           <div className="reveal max-w-6xl mx-auto flex flex-col gap-8 items-center">
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#6B615A] block">Premium Holistic Coaching</span>
               
-              <h1 className="text-5xl md:text-6xl lg:text-8xl font-serif text-maroon leading-[1.1] tracking-tight max-w-5xl">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-maroon leading-[1.1] tracking-tight max-w-5xl">
                   Guiding you back to balance <br className="hidden md:block"/>
                   <span className="italic font-light">through structure, awareness, and support.</span>
               </h1>
@@ -73,10 +87,16 @@ export default function App() {
                 Personalised Approach.
               </p>
 
-              <div className="flex justify-center w-full mt-4">
+              <div className="flex flex-col sm:flex-row justify-center flex-wrap gap-4 w-full mt-6">
                   <a href="#contact" className="w-full sm:w-auto bg-maroon text-white px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold shadow-lg shadow-maroon/20 flex items-center justify-center gap-3 hover:bg-[#5A2424] transition-all duration-700">
                       Book a Free 15 Min Call
-                      <ArrowRight size={18} />
+                      <ArrowRight size={14} />
+                  </a>
+                  <a href="#contact" className="w-full sm:w-auto bg-transparent border border-maroon text-maroon px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-all duration-700 flex items-center justify-center gap-3">
+                      Collaboration & Partnership
+                  </a>
+                  <a href="#contact" className="w-full sm:w-auto bg-transparent border border-maroon text-maroon px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-all duration-700 flex items-center justify-center gap-3">
+                      Workshops & Key Note Speaking
                   </a>
               </div>
           </div>
@@ -85,38 +105,48 @@ export default function App() {
       {/* High-Conversion Line */}
       <section className="w-full bg-white py-24 px-6 border-y border-beige relative overflow-hidden reveal">
           <div className="max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-8 bg-[#FDFBF7] border border-beige">
-              <div className="text-maroon/20 mb-6">
-                 <Info size={40} className="fill-current text-white stroke-maroon/40" />
-              </div>
-              <p className="md:text-3xl leading-snug text-2xl font-light italic text-[#4A423C] font-serif mb-4">
+              <p className="md:text-4xl leading-relaxed text-3xl font-light italic text-maroon font-serif mb-0">
                 "Most women don’t lack knowledge, they lack the right structure and support."
               </p>
-              <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#6B615A]">— Our Philosophy</span>
+          </div>
+      </section>
+
+      {/* Introductory Video Section */}
+      <section className="py-24 px-6 bg-white border-b border-beige">
+          <div className="max-w-5xl mx-auto reveal">
+              <div className="aspect-video w-full bg-[#EBE5D9] border border-beige flex items-center justify-center relative group cursor-pointer overflow-hidden shadow-sm">
+                  <div className="absolute inset-0 bg-maroon/5 group-hover:bg-maroon/10 transition-colors duration-700"></div>
+                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl text-maroon transform group-hover:scale-110 transition-transform duration-700">
+                      <Play size={32} className="ml-2" />
+                  </div>
+              </div>
           </div>
       </section>
 
       {/* About Section */}
-      <section className="md:px-6 md:py-40 py-40 px-6" id="about">
-          <div className="grid md:grid-cols-2 gap-20 md:gap-32 max-w-6xl mx-auto items-center">
-              <div className="reveal relative">
-                  <div className="aspect-[3/4] bg-center bg-[url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop)] bg-cover p-4 relative grayscale-[20%]">
-                      <div className="border-beige/50 flex bg-[#FDFBF7]/80 backdrop-blur-sm w-full h-full border items-center justify-center">
-                        <Leaf size={80} className="text-maroon/30" />
-                      </div>
+      <section className="md:px-6 md:py-40 py-32 px-6 bg-[#FDFBF7]" id="about">
+          <div className="grid md:grid-cols-2 gap-20 max-w-6xl mx-auto items-center">
+              <div className="reveal relative flex justify-center">
+                  <div className="w-3/4 aspect-[3/4] bg-center bg-[url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop)] bg-cover p-4 relative grayscale-[10%] shadow-lg">
                   </div>
               </div>
-              <div className="flex flex-col gap-10 reveal">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block border-b border-beige pb-4">Our Philosophy</span>
-                  <h2 className="md:text-5xl text-maroon leading-tight text-4xl tracking-tight font-serif">
-                    At LEEZE Holistic, true health is not forced.
-                  </h2>
-                  <div className="space-y-8 text-lg font-serif text-[#6B615A] leading-relaxed">
+              <div className="flex flex-col gap-8 reveal">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block border-b border-beige pb-4">Our Founder</span>
+                  <div className="flex flex-col gap-2">
+                    <h2 className="md:text-5xl text-maroon leading-tight text-4xl tracking-tight font-serif">
+                      Coach Zainab
+                    </h2>
+                    <span className="text-[10px] uppercase tracking-widest text-[#4A423C] font-semibold">Nutritionist & Certified Health Coach</span>
+                  </div>
+                  <div className="space-y-6 text-base font-serif text-[#6B615A] leading-relaxed">
                       <p>
-                        It is restored by aligning with the body's biological intelligence. We guide you to understand your body through a clear structured, premium system so you can stop guessing and start
-                        responding to what your body actually needs.
+                        My journey started with my own struggles in restoring health when standard advice fell short. After years of exploring deep biological intelligence and holistic frameworks, I realized the missing link wasn't just knowledge, but structure.
                       </p>
-                      <div className="pl-8 border-l border-maroon">
-                          <p className="text-xl text-[#4A423C] italic">
+                      <p>
+                        At LEEZE Holistic, true health is not forced. It is restored by aligning with the body's natural needs. I designed this premium system so you can stop guessing and start responding to what your body actually requires.
+                      </p>
+                      <div className="pl-6 border-l border-maroon mt-6">
+                          <p className="text-lg text-[#4A423C] italic">
                               This is not about quick fixes.<br/>
                               It’s about building a foundation your body can trust.
                           </p>
@@ -335,11 +365,7 @@ export default function App() {
                           </div>
                       </div>
 
-                      <div className="pt-6 border-t border-maroon/10 flex justify-between items-center max-w-3xl mx-auto mb-8">
-                          <span className="text-[10px] font-bold uppercase tracking-widest text-[#6B615A]">Global Online Available</span>
-                      </div>
-
-                      <a href="https://wa.link/gwlgym" className="inline-flex items-center justify-center uppercase bg-maroon text-white hover:bg-[#5A2424] transition-all duration-700 shadow-lg shadow-maroon/20 text-[10px] font-bold tracking-[0.2em] py-4 px-8">
+                      <a href="https://wa.link/gwlgym" className="inline-flex items-center justify-center uppercase bg-maroon text-white hover:bg-[#5A2424] transition-all duration-700 shadow-lg shadow-maroon/20 text-[10px] font-bold tracking-[0.2em] py-4 px-8 mt-4">
                           Secure Your Session
                       </a>
                   </div>
@@ -427,6 +453,12 @@ export default function App() {
                   </div>
               </div>
           </div>
+          
+          <div className="mt-20 text-center reveal">
+              <a href="#contact" className="inline-flex items-center justify-center uppercase hover:bg-[#5A2424] transition-all duration-700 font-bold text-[10px] text-white tracking-[0.2em] bg-maroon py-5 px-10 shadow-lg shadow-maroon/20">
+                  Join the Community
+              </a>
+          </div>
       </section>
 
       {/* Coaches Section */}
@@ -439,7 +471,8 @@ export default function App() {
 
               <div className="grid md:grid-cols-2 gap-12 lg:gap-16 reveal">
                   {/* Coach Zainab */}
-                  <div className="group bg-white p-12 border border-beige hover:border-maroon transition-colors duration-700">
+                  <div className="group bg-white p-8 md:p-12 border border-beige hover:border-maroon transition-colors duration-700 flex flex-col">
+                      <div className="w-full aspect-square bg-[#FDFBF7] bg-center bg-cover bg-[url(https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800)] grayscale-[20%] mb-10 border border-beige"></div>
                       <div className="mb-8 flex justify-between items-start">
                           <h3 className="font-serif text-4xl tracking-tight text-[#4A423C]">Coach Zainab</h3>
                       </div>
@@ -448,7 +481,7 @@ export default function App() {
                       </div>
                       <p className="font-serif italic text-2xl text-maroon mb-10 leading-snug">“Guiding women to reconnect with their body and restore internal balance.”</p>
                       
-                      <div className="pt-8 border-t border-beige">
+                      <div className="pt-8 border-t border-beige mt-auto">
                           <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block mb-6">Focus Areas</span>
                           <ul className="flex flex-wrap gap-3">
                               <li className="px-5 py-2 bg-[#FDFBF7] border border-beige text-xs text-[#4A423C] tracking-wide">Hormonal Health</li>
@@ -459,7 +492,8 @@ export default function App() {
                   </div>
 
                   {/* Coach Jay */}
-                  <div className="group bg-white p-12 border border-beige hover:border-maroon transition-colors duration-700">
+                  <div className="group bg-white p-8 md:p-12 border border-beige hover:border-maroon transition-colors duration-700 flex flex-col">
+                      <div className="w-full aspect-square bg-[#FDFBF7] bg-center bg-cover bg-[url(https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800)] grayscale-[20%] mb-10 border border-beige"></div>
                       <div className="mb-8 flex justify-between items-start">
                           <h3 className="font-serif text-4xl tracking-tight text-[#4A423C]">Coach Jay</h3>
                       </div>
@@ -468,7 +502,7 @@ export default function App() {
                       </div>
                       <p className="font-serif italic text-2xl text-maroon mb-10 leading-snug">“Helping men build strength, clarity, and confidence from within.”</p>
                       
-                      <div className="pt-8 border-t border-beige">
+                      <div className="pt-8 border-t border-beige mt-auto">
                           <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block mb-6">Focus Areas</span>
                           <ul className="flex flex-wrap gap-3">
                               <li className="px-5 py-2 bg-[#FDFBF7] border border-beige text-xs text-[#4A423C] tracking-wide">Fitness & Strength</li>
@@ -496,17 +530,28 @@ export default function App() {
           </div>
       </section>
 
+      {/* Footer Quote */}
+      <section className="py-24 px-6 bg-[#FDFBF7] text-center border-t border-beige">
+          <h2 className="text-maroon uppercase text-4xl tracking-[0.2em] font-serif mb-6">LEEZE Holistic</h2>
+          <p className="text-xl text-[#6B615A] font-serif italic max-w-2xl mx-auto">"Supporting your body, not overriding it."</p>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-white py-12 px-6 border-t border-beige">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between text-[10px] uppercase tracking-[0.2em] text-[#6B615A] gap-4">
-              <div className="flex gap-8">
-                  <span>© 2026 Leeze Holistic</span>
-                  <span>Privacy Policy</span>
+      <footer className="bg-white py-16 px-6 border-t border-maroon/20">
+          <div className="max-w-6xl mx-auto flex flex-col justify-center items-center gap-10">
+              <div className="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-[0.2em] text-[#4A423C] font-bold">
+                  <a href="https://linktr.ee/leeze" className="hover:text-maroon transition-colors py-1">Instagram</a>
+                  <a href="https://tiktok.com" className="hover:text-maroon transition-colors py-1">TikTok</a>
+                  <a href="https://wa.link/gwlgym" className="hover:text-maroon transition-colors py-1">WhatsApp</a>
+                  <a href="https://telegram.org" className="hover:text-maroon transition-colors py-1">Telegram</a>
+                  <a href="https://linkedin.com" className="hover:text-maroon transition-colors py-1">LinkedIn</a>
+                  <a href="https://youtube.com" className="hover:text-maroon transition-colors py-1">YouTube</a>
+                  <a href="https://linktr.ee/leeze" className="hover:text-maroon transition-colors py-1">Linktree</a>
               </div>
-              <div className="flex items-center gap-6">
-                  <a href="https://linktr.ee/leeze" className="hover:text-maroon transition-colors">Instagram</a>
-                  <a href="https://wa.link/gwlgym" className="hover:text-maroon transition-colors">WhatsApp</a>
-                  <div className="h-4 w-px bg-beige"></div>
+              <div className="w-24 h-px bg-beige"></div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] flex flex-col md:flex-row items-center gap-4">
+                  <span>© 2026 Leeze Holistic</span>
+                  <span className="hidden md:inline">•</span>
                   <span className="text-maroon font-bold">Built for Health</span>
               </div>
           </div>
