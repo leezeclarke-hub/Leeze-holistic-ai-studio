@@ -28,3 +28,11 @@ body {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+@keyframes gentle-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+.animate-gentle-pulse {
+    animation: gentle-pulse 2s infinite ease-in-out;
+}

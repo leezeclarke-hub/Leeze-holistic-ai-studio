@@ -88,14 +88,14 @@ export default function App() {
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center flex-wrap gap-4 w-full mt-6">
-                  <a href="#contact" className="w-full sm:w-auto bg-maroon text-white px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold shadow-lg shadow-maroon/20 flex items-center justify-center gap-3 hover:bg-[#5A2424] transition-all duration-700">
+                  <a href="#contact" className="w-full sm:w-auto bg-maroon text-white px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold shadow-lg shadow-maroon/20 flex items-center justify-center gap-3 hover:bg-[#5A2424] transition-all duration-700 animate-gentle-pulse">
                       Book a Free 15 Min Call
                       <ArrowRight size={14} />
                   </a>
-                  <a href="#contact" className="w-full sm:w-auto bg-transparent border border-maroon text-maroon px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-all duration-700 flex items-center justify-center gap-3">
+                  <a href="https://wa.link/q6ey1q" className="w-full sm:w-auto bg-transparent border border-maroon text-maroon px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-all duration-700 flex items-center justify-center gap-3">
                       Collaboration & Partnership
                   </a>
-                  <a href="#contact" className="w-full sm:w-auto bg-transparent border border-maroon text-maroon px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-all duration-700 flex items-center justify-center gap-3">
+                  <a href="https://wa.link/lgvk6d" className="w-full sm:w-auto bg-transparent border border-maroon text-maroon px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-all duration-700 flex items-center justify-center gap-3">
                       Workshops & Key Note Speaking
                   </a>
               </div>
