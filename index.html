@@ -1,13 +1,667 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEEZE Holistic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+        }
+        .font-serif {
+            font-family: 'Bodoni Moda', serif;
+        }
+        .bg-maroon {
+            background-color: #4A1A1A;
+        }
+        .text-maroon {
+            color: #4A1A1A;
+            fill: currentColor;
+        }
+        .border-maroon {
+            border-color: #4A1A1A;
+        }
+        .bg-beige {
+            background-color: #EBE5D9;
+        }
+        .border-beige {
+            border-color: #EBE5D9;
+        }
+        
+        .marquee-container {
+            display: flex;
+            width: fit-content;
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 16px)); }
+        }
+        .marquee-container:hover {
+            animation-play-state: paused;
+        }
+        
+        .opacity-0 { opacity: 0; }
+        .translate-y-12 { transform: translateY(3rem); }
+        .opacity-100 { opacity: 1; }
+        .translate-y-0 { transform: translateY(0); }
+        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+        .duration-\[1200ms\] { transition-duration: 1200ms; }
+        .ease-out { transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="antialiased font-light selection:bg-[#4A1A1A] selection:text-white overflow-x-hidden">
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
+react';
+./components/ChatAssistant';
+lucide-react';
+
+) => observer.disconnect();
+  }, []);
+
+  return (
+    <div class="antialiased font-light selection:bg-maroon selection:text-white overflow-x-hidden">
+      {/* Navigation */}
+      <nav class="fixed w-full top-0 z-50 h-20 px-6 md:px-12 flex items-center justify-between border-b border-beige bg-white/50 backdrop-blur-sm shrink-0 transition-all duration-500">
+          <div class="max-w-6xl mx-auto w-full flex items-center justify-between">
+              <a href="https://linktr.ee/leeze" class="text-maroon uppercase text-xl tracking-[0.2em] font-serif hover:opacity-80 transition-opacity">
+                Leeze <span class="font-light opacity-70">Holistic</span>
+              </a>
+              <div class="hidden md:flex items-center gap-10 text-[10px] uppercase tracking-[0.15em] font-semibold text-[#6B615A]">
+                  <a href="#about" class="hover:text-maroon transition-colors duration-500">About</a>
+                  <a href="#method" class="hover:text-maroon transition-colors duration-500">Method</a>
+                  <a href="#services" class="hover:text-maroon transition-colors duration-500">Services</a>
+                  <a href="#coaches" class="hover:text-maroon transition-colors duration-500">Coaches</a>
+              </div>
+              <a href="https://wa.link/gwlgym" class="hidden md:inline-flex px-6 py-2.5 border border-maroon text-maroon text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-colors">
+                  Book a Call
+              </a>
+              <button class="md:hidden text-maroon relative z-50 p-2" >
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="feather feather-menu text-maroon" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="menu-icon-dynamic"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+              </button>
+          </div>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div class="fixed inset-0 bg-[#FDFBF7] z-40 transition-transform duration-500 pt-32 px-6 flex flex-col justify-start md:hidden -translate-y-full" id="mobile-menu">
+          <div class="flex flex-col gap-10 text-center text-sm uppercase tracking-[0.2em] font-semibold text-[#4A423C]">
+              <a href="#about" class="hover:text-maroon transition-colors py-2">About</a>
+              <a href="#method" class="hover:text-maroon transition-colors py-2">Method</a>
+              <a href="#services" class="hover:text-maroon transition-colors py-2">Services</a>
+              <a href="#coaches" class="hover:text-maroon transition-colors py-2">Coaches</a>
+              <a href="https://wa.link/gwlgym" class="mt-4 px-8 py-4 bg-maroon text-white text-[10px] uppercase tracking-[0.2em] font-bold self-center shadow-lg shadow-maroon/20 hover:bg-[#5A2424] transition-all duration-700 w-full max-w-xs">
+                  Book a Call
+              </a>
+          </div>
+      </div>
+
+      {/* Hero Section */}
+      <section class="relative flex-grow flex flex-col items-center justify-center p-6 md:p-12 pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden text-center">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[600px] bg-[#F4F0E6] rounded-full blur-[120px] opacity-40 -z-10"></div>
+
+          <div class="reveal max-w-6xl mx-auto flex flex-col gap-8 items-center">
+              <span class="text-[10px] uppercase tracking-[0.3em] text-[#6B615A] block">Premium Holistic Coaching</span>
+              
+              <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif text-maroon leading-[1.1] tracking-tight max-w-5xl">
+                  Guiding you back to balance <br class="hidden md:block"/>
+                  <span class="italic font-light">through structure, awareness, and support.</span>
+              </h1>
+              
+              <p class="text-lg md:text-xl font-serif text-[#6B615A] leading-relaxed max-w-2xl mx-auto">
+                Holistic Coaching to Restore Energy, Regulate Hormones, and Reconnect with Your Body Through a Guided,
+                Personalised Approach.
+              </p>
+
+              <div class="flex flex-col sm:flex-row justify-center flex-wrap gap-4 w-full mt-6">
+                  <a href="#contact" class="w-full sm:w-auto bg-maroon text-white px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold shadow-lg shadow-maroon/20 flex items-center justify-center gap-3 hover:bg-[#5A2424] transition-all duration-700 animate-gentle-pulse">
+                      Book a Free 15 Min Call
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                  <a href="https://wa.link/q6ey1q" class="w-full sm:w-auto bg-transparent border border-maroon text-maroon px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-all duration-700 flex items-center justify-center gap-3">
+                      Collaboration & Partnership
+                  </a>
+                  <a href="https://wa.link/lgvk6d" class="w-full sm:w-auto bg-transparent border border-maroon text-maroon px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-maroon hover:text-white transition-all duration-700 flex items-center justify-center gap-3">
+                      Workshops & Key Note Speaking
+                  </a>
+              </div>
+          </div>
+      </section>
+
+      {/* High-Conversion Line */}
+      <section class="w-full bg-white py-16 md:py-24 px-6 border-y border-beige relative overflow-hidden reveal">
+          <div class="max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-8 bg-[#FDFBF7] border border-beige">
+              <p class="md:text-4xl leading-relaxed text-2xl font-light italic text-maroon font-serif mb-0">
+                "Most women don’t lack knowledge, they lack the right structure and support."
+              </p>
+          </div>
+      </section>
+
+      {/* About Section */}
+      <section class="md:px-6 md:py-40 py-20 md:py-32 px-6 bg-[#FDFBF7]" id="about">
+          <div class="max-w-4xl mx-auto items-center text-center">
+              <div class="flex flex-col gap-8 reveal">
+                  <span class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block border-b border-beige pb-4">Our Founder</span>
+                  <div class="flex flex-col gap-2">
+                    <h2 class="md:text-5xl text-maroon leading-tight text-3xl md:text-4xl tracking-tight font-serif">
+                      Coach Zainab
+                    </h2>
+                    <span class="text-[10px] uppercase tracking-widest text-[#4A423C] font-semibold">Nutritionist & Certified Health Coach</span>
+                  </div>
+                  <div class="space-y-6 text-base font-serif text-[#6B615A] leading-relaxed">
+                      <p>
+                        My journey started with my own struggles in restoring health when standard advice fell short. After years of exploring deep biological intelligence and holistic frameworks, I realized the missing link wasn't just knowledge, but structure.
+                      </p>
+                      <p>
+                        At LEEZE Holistic, true health is not forced. It is restored by aligning with the body's natural needs. I designed this premium system so you can stop guessing and start responding to what your body actually requires.
+                      </p>
+                      <div class="md:pl-6 md:border-l border-t md:border-t-0 pt-6 md:pt-0 border-maroon mt-6 text-center md:text-left">
+                          <p class="text-lg text-[#4A423C] italic">
+                              This is not about quick fixes.<br class="hidden md:block"/>
+                              It’s about building a foundation your body can trust.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      {/* Signature Method Section */}
+      <section id="method" class="py-20 md:py-40 px-6 bg-[#FDFBF7] border-y border-beige">
+          <div class="max-w-6xl mx-auto">
+              <div class="text-center mb-20 md:mb-32 reveal">
+                  <span class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block mb-6">Our Signature Approach</span>
+                  <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight text-maroon mb-8">The LEEZE Regulation Method</h2>
+                  <p class="text-lg font-serif text-[#6B615A] max-w-2xl mx-auto">
+                      A structured 3-phase system designed to guide your body back into balance with precision and elegance.
+                  </p>
+              </div>
+
+              {/* 3 Phases */}
+              <div class="grid md:grid-cols-3 gap-6 mb-24 reveal shrink-0">
+                  {/* Phase 1 */}
+                  <div class="bg-white border border-beige p-8 flex flex-col gap-4 hover:border-maroon transition-colors duration-700">
+                      <div class="text-maroon font-serif text-3xl opacity-30">01</div>
+                      <h3 class="font-serif text-xl text-[#4A423C]">Stabilise</h3>
+                      <p class="text-xs text-[#6B615A] leading-relaxed uppercase tracking-wider">Create safety and consistency within the body.</p>
+                      <p class="text-xs font-serif italic text-maroon/80 border-t border-beige pt-4 mt-auto">(We will use Listen & Eliminate approaches)</p>
+                  </div>
+                  {/* Phase 2 */}
+                  <div class="bg-white border border-beige p-8 flex flex-col gap-4 hover:border-maroon transition-colors duration-700">
+                      <div class="text-maroon font-serif text-3xl opacity-30">02</div>
+                      <h3 class="font-serif text-xl text-[#4A423C]">Rebuild</h3>
+                      <p class="text-xs text-[#6B615A] leading-relaxed uppercase tracking-wider">Restore function, energy, and internal balance.</p>
+                      <p class="text-maroon/80 border-beige text-xs italic font-serif border-t pt-4 mt-auto">(We will use Eat & Support approaches)</p>
+                  </div>
+                  {/* Phase 3 */}
+                  <div class="bg-white border border-beige p-8 flex flex-col gap-4 hover:border-maroon transition-colors duration-700">
+                      <div class="text-maroon font-serif text-3xl opacity-30">03</div>
+                      <h3 class="font-serif text-xl text-[#4A423C]">Elevate</h3>
+                      <p class="text-xs text-[#6B615A] leading-relaxed uppercase tracking-wider">Optimise and maintain long-term balance.</p>
+                      <p class="text-xs font-serif italic text-maroon/80 border-t border-beige pt-4 mt-auto">(We will empower your knowledge to have long lasting results)</p>
+                  </div>
+              </div>
+
+              {/* Framework & Focus Grid */}
+              <div class="grid lg:grid-cols-2 gap-8 reveal">
+                  {/* LEEZE Framework Box */}
+                  <div class="bg-white p-12 md:p-16 border border-beige flex flex-col justify-center">
+                      <h4 class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] mb-8 text-center">Guided by the</h4>
+                      <h4 class="font-serif text-3xl tracking-tight text-maroon mb-12 text-center">
+                          LEEZE Framework
+                      </h4>
+                      <ul class="space-y-8">
+                          <li class="flex items-start gap-6 border-b border-beige pb-6">
+                              <span class="text-maroon font-serif text-xl italic mt-0.5">L</span>
+                              <div>
+                                  <strong class="font-serif text-xl font-normal text-[#4A423C] block mb-1">Listen</strong> 
+                                  <span class="text-xs text-[#6B615A] uppercase tracking-widest">Understand your body’s signals</span>
+                              </div>
+                          </li>
+                          <li class="flex items-start gap-6 border-b border-beige pb-6">
+                              <span class="text-maroon font-serif text-xl italic mt-0.5">E</span>
+                              <div>
+                                  <strong class="font-serif text-xl font-normal text-[#4A423C] block mb-1">Eliminate</strong> 
+                                  <span class="text-xs text-[#6B615A] uppercase tracking-widest">Remove what disrupts balance</span>
+                              </div>
+                          </li>
+                          <li class="flex items-start gap-6 border-b border-beige pb-6">
+                              <span class="text-maroon font-serif text-xl italic mt-0.5">E</span>
+                              <div>
+                                  <strong class="font-serif text-xl font-normal text-[#4A423C] block mb-1">Eat</strong> 
+                                  <span class="text-xs text-[#6B615A] uppercase tracking-widest">Nourish your body intentionally</span>
+                              </div>
+                          </li>
+                          <li class="flex items-start gap-6 border-b border-beige pb-6">
+                              <span class="text-maroon font-serif text-xl italic mt-0.5">Z</span>
+                              <div>
+                                  <strong class="block text-xl font-normal text-[#4A423C] font-serif mb-1">Support</strong> 
+                                  <span class="uppercase text-xs text-[#6B615A] tracking-widest">Coaching guidance by our Founder</span>
+                              </div>
+                          </li>
+                          <li class="flex items-start gap-6">
+                              <span class="text-maroon font-serif text-xl italic mt-0.5">E</span>
+                              <div>
+                                  <strong class="font-serif text-xl font-normal text-[#4A423C] block mb-1">Empower</strong> 
+                                  <span class="text-xs text-[#6B615A] uppercase tracking-widest">Build long term independence</span>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+
+                  {/* Combined Core Focus Box */}
+                  <div class="border-beige flex flex-col md:p-16 text-center bg-[#F4F0E6]/30 h-full border py-9 px-12 items-center justify-center">
+                      <h4 class="font-serif text-3xl tracking-tight text-[#4A423C] mb-12">Core Focus Areas</h4>
+                      
+                      <div class="mb-12 w-full">
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-maroon mb-6">Primary Focus</p>
+                          <div class="flex flex-wrap justify-center gap-4">
+                              <span class="px-6 py-3 bg-white border border-beige text-xs text-[#4A423C] font-medium tracking-wide">Nervous System Regulation</span>
+                              <span class="px-6 py-3 bg-white border border-beige text-xs text-[#4A423C] font-medium tracking-wide">Digestion & Elimination</span>
+                              <span class="px-6 py-3 bg-white border border-beige text-xs text-[#4A423C] font-medium tracking-wide">Energy & Daily Rhythm</span>
+                          </div>
+                      </div>
+                      
+                      <div class="w-16 h-px bg-maroon/20 mx-auto mb-12"></div>
+                      
+                      <div class="w-full">
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] mb-6">Essential Subcategories</p>
+                          <div class="flex flex-wrap justify-center gap-4">
+                              <span class="px-5 py-2.5 bg-transparent border border-beige text-xs text-[#6B615A] tracking-wide">Blood Sugar Regulation</span>
+                              <span class="px-5 py-2.5 bg-transparent border border-beige text-xs text-[#6B615A] tracking-wide">Cortisol & Emotional Balance</span>
+                              <span class="px-5 py-2.5 bg-transparent border border-beige text-xs text-[#6B615A] tracking-wide">Gut Health & Inflammation</span>
+                              <span class="px-5 py-2.5 bg-transparent border border-beige text-xs text-[#6B615A] tracking-wide">Cycle-Sync Nutrition</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      {/* How You Work With Us */}
+      <section class="py-20 md:py-40 px-6 bg-white relative">
+          <div class="max-w-4xl mx-auto">
+              <div class="text-center mb-24 reveal">
+                  <h2 class="md:text-6xl text-maroon text-3xl md:text-4xl tracking-tight font-serif mb-6">How You Work With Us</h2>
+              </div>
+
+              <div class="relative space-y-12">
+                  {/* Connecting Line */}
+                  <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-beige hidden md:block"></div>
+
+                  {/* Layer 1 */}
+                  <div class="flex flex-col md:flex-row reveal z-10 relative gap-12 items-center justify-between">
+                      <div class="md:w-5/12 text-center md:text-right">
+                          <span class="text-[10px] uppercase text-maroon block tracking-[0.2em] mb-4">Layer 1</span>
+                          <h3 class="font-serif text-3xl tracking-tight text-[#4A423C] mb-6">Educational System</h3>
+                          <p class="text-sm text-[#6B615A] mb-6 font-serif italic text-lg">You begin by understanding your body. You’ll learn:</p>
+                          <ul class="space-y-4 text-xs tracking-widest uppercase text-[#4A423C]">
+                              <li>How your body responds</li>
+                              <li>What’s creating imbalance</li>
+                              <li>How to support it properly</li>
+                          </ul>
+                      </div>
+                      
+                      <div class="md:w-5/12 hidden md:block"></div>
+                  </div>
+
+                  {/* Layer 2 */}
+                  <div class="flex flex-col md:flex-row items-center justify-between gap-12 relative z-10 reveal">
+                      <div class="md:w-5/12 hidden md:block"></div>
+                      
+                      <div class="md:w-5/12 text-center md:text-left">
+                          <span class="text-[10px] uppercase tracking-[0.2em] text-maroon mb-4 block">Layer 2</span>
+                          <h3 class="font-serif text-3xl tracking-tight text-[#4A423C] mb-6">Personalised Coaching</h3>
+                          <p class="text-sm text-[#6B615A] mb-6 font-serif italic text-lg">Then we personalise everything for you. This includes:</p>
+                          <ul class="space-y-4 text-xs tracking-widest uppercase text-[#4A423C]">
+                              <li>One on one coaching</li>
+                              <li>Structured guidance and accountability</li>
+                              <li>Adjustments based on your body’s response</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="mt-32 text-center reveal">
+                  <a href="#services" class="inline-flex items-center justify-center uppercase hover:bg-black transition-all duration-700 font-bold text-[10px] text-white tracking-[0.2em] bg-[#4A423C] py-5 px-10">
+                      Explore Services
+                  </a>
+              </div>
+          </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" class="py-20 md:py-40 px-6 bg-[#F4F0E6] border-y border-beige">
+          <div class="max-w-5xl mx-auto">
+              
+              <div class="text-center mb-24 reveal">
+                  <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight text-[#4A423C]">Our Services</h2>
+              </div>
+
+              {/* Featured Service */}
+              <div class="bg-[#F4F0E6] p-10 md:p-16 border border-beige flex flex-col justify-between relative overflow-hidden mb-12 reveal">
+                  <div class="relative z-10 text-center">
+                      <span class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] mb-4 block">Featured Experience</span>
+                      
+                      <h3 class="font-serif text-4xl md:text-5xl text-maroon mb-6">
+                          1:1 Coaching & Health Consultation
+                      </h3>
+                      
+                      <p class="text-maroon text-xl italic font-serif mb-10">Drawing from the experience of over 600 consultations.</p>
+                      
+                      <p class="text-base font-serif text-[#6B615A] mb-16 leading-relaxed max-w-3xl mx-auto text-lg">
+                          A personalised one-on-one session where we explore your current struggles and guide you with a structured, practical approach. Together, we identify what is not working, what your body needs, and how to move forward with absolute clarity.
+                      </p>
+                      
+                      <div class="mb-16">
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#4A423C] mb-8">This includes support with:</p>
+                          <div class="grid grid-cols-1 md:grid-cols-4 gap-0 border-y border-beige divide-y md:divide-y-0 md:divide-x divide-beige bg-[#FDFBF7]">
+                              <div class="py-8 px-4 flex gap-3 items-center justify-center">
+                                  <span class="font-serif text-xl tracking-tight text-[#4A423C]">Stress & Burnout</span>
+                              </div>
+                              <div class="py-8 px-4 flex gap-3 items-center justify-center">
+                                  <span class="font-serif text-xl tracking-tight text-[#4A423C]">Hormonal Imbalance</span>
+                              </div>
+                              <div class="py-8 px-4 flex gap-3 items-center justify-center">
+                                  <span class="font-serif text-xl tracking-tight text-[#4A423C]">Energy & Metabolism</span>
+                              </div>
+                              <div class="py-8 px-4 flex gap-3 items-center justify-center">
+                                  <span class="font-serif text-xl tracking-tight text-[#4A423C]">Gut & Liver Health</span>
+                              </div>
+                          </div>
+                      </div>
+
+                      <a href="https://wa.link/gwlgym" class="inline-flex items-center justify-center uppercase bg-maroon text-white hover:bg-[#5A2424] transition-all duration-700 shadow-lg shadow-maroon/20 text-[10px] font-bold tracking-[0.2em] py-4 px-8 mt-4">
+                          Secure Your Session
+                      </a>
+                  </div>
+              </div>
+
+              {/* Additional Services Grid */}
+              <div class="grid md:grid-cols-2 gap-12 reveal">
+                  {/* Device Testing */}
+                  <div class="bg-[#FDFBF7] p-12 md:p-16 border border-beige flex flex-col justify-between">
+                      <div>
+                          <h3 class="font-serif text-3xl tracking-tight text-[#4A423C] mb-4">Device Testing</h3>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-maroon mb-8">Malaysia & Brunei Residents Only</p>
+                          <p class="text-base font-serif text-[#6B615A] leading-relaxed mb-12">
+                              Utilising an advanced electromagnetic resonance device to comprehensively check for vitamins, minerals, hormones, liver function, gut health, and overall internal vitality.
+                          </p>
+                      </div>
+                      <a href="https://wa.link/a5furx" class="inline-flex items-center uppercase hover:text-maroon transition-colors gap-3 hover:border-maroon text-[10px] font-bold text-[#4A423C] tracking-[0.2em] w-fit border-[#4A423C] border-b pb-2">
+                          Enquire Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                      </a>
+                  </div>
+
+                  {/* Recommended Products */}
+                  <div class="bg-[#FDFBF7] p-12 md:p-16 border border-beige flex flex-col justify-between">
+                      <div>
+                          <h3 class="font-serif text-3xl tracking-tight text-[#4A423C] mb-4">Recommended Products</h3>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] mb-8">Trusted Support Tools</p>
+                          <p class="text-base font-serif text-[#6B615A] leading-relaxed mb-12">
+                              Explore our curated selection of trusted products and supplements. Use our recommended links to access high-quality holistic support for your daily journey.
+                          </p>
+                      </div>
+                      <a href="https://wa.link/dh2kpv" class="inline-flex items-center uppercase hover:text-maroon transition-colors gap-3 hover:border-maroon text-[10px] font-bold text-[#4A423C] tracking-[0.2em] w-fit border-[#4A423C] border-b pb-2">
+                          View Collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section class="py-20 md:py-32 bg-white overflow-hidden border-b border-beige">
+          <div class="text-center mb-24 reveal">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] mb-6 block">Client Stories</span>
+              <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight text-maroon">Words From Our Community</h2>
+          </div>
+          
+          <div class="relative w-full">
+              <div class="marquee-container gap-8 px-4">
+                  {/* Set 1 */}
+                  <div class="flex gap-8">
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"You are talented, I learned so much from you, your presentation and influence is great. I learn from your passion in practicing in your lifestyle. Thank you Coach"</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Susan A. (Atomy Center Leader)</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Coach Zainab inspired me to start my healthy eating habit. I usually struggle a lot with being consistent especially I am selective and sensitive when it comes to food changes or trying new meals outside my culture. Each time I have a session with her I get super excited at how she takes me through the process."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Umami F.</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"The cleanse protocol is amazing! I feel so much lighter and more energy. Thank you so much for the guidance! Jazak Allah khair. I told my mom, my cousins and my friends to join as this is sooo good mashaAllah"</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Noor H.</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I expected general health advice, something I genuinely needed. What I received, however, was so much more. Coach Zainab created a warm, encouraging, and attentive space where I was able to engage in deep introspection and self-discovery."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Sarah M. (English Tutor)</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I want to appreciate you Coach Zainab for helping me and changing my way of life/living/view, JUST EVERYTHING. You are the greatest influence that have ever happened to me."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Salma M. (Dentist)</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Thank you for the inspiring coaching. I’ve learned so much, and I know this journey is just the beginning. Conversations like these help me see things differently and reconnect with myself, my health, my habits, and my daily routine."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Darya K. (Model @darya.ionic)</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Coach Jay helped me build physical strength and mental clarity. Highly recommend the LEEZE method."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Shafiq R.</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I had no idea what holistic was back then. Now I am starting to follow holistic approaches."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Clarissa H.</p>
+                      </div>
+                  </div>
+                  {/* Set 2 (Duplicate for continuous scroll) */}
+                  <div class="flex gap-8">
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"You are talented, I learned so much from you, your presentation and influence is great. I learn from your passion in practicing in your lifestyle. Thank you Coach"</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Susan A. (Atomy Center Leader)</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Coach Zainab inspired me to start my healthy eating habit. I usually struggle a lot with being consistent especially I am selective and sensitive when it comes to food changes or trying new meals outside my culture. Each time I have a session with her I get super excited at how she takes me through the process."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Umami F.</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"The cleanse protocol is amazing! I feel so much lighter and more energy. Thank you so much for the guidance! Jazak Allah khair. I told my mom, my cousins and my friends to join as this is sooo good mashaAllah"</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Noor H.</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I expected general health advice, something I genuinely needed. What I received, however, was so much more. Coach Zainab created a warm, encouraging, and attentive space where I was able to engage in deep introspection and self-discovery."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Sarah M. (English Tutor)</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I want to appreciate you Coach Zainab for helping me and changing my way of life/living/view, JUST EVERYTHING. You are the greatest influence that have ever happened to me."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Salma M. (Dentist)</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Thank you for the inspiring coaching. I’ve learned so much, and I know this journey is just the beginning. Conversations like these help me see things differently and reconnect with myself, my health, my habits, and my daily routine."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Darya K. (Model @darya.ionic)</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Coach Jay helped me build physical strength and mental clarity. Highly recommend the LEEZE method."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Shafiq R.</p>
+                      </div>
+                      <div class="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p class="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I had no idea what holistic was back then. Now I am starting to follow holistic approaches."</p>
+                          <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Clarissa H.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="mt-20 text-center reveal">
+              <a href="#contact" class="inline-flex items-center justify-center uppercase hover:bg-[#5A2424] transition-all duration-700 font-bold text-[10px] text-white tracking-[0.2em] bg-maroon py-5 px-10 shadow-lg shadow-maroon/20">
+                  Join the Community
+              </a>
+          </div>
+      </section>
+
+      {/* Coaches Section */}
+      <section id="coaches" class="py-20 md:py-40 px-6 bg-[#FDFBF7]">
+          <div class="max-w-6xl mx-auto">
+              <div class="text-center mb-24 reveal">
+                  <span class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] mb-6 block">Expert Guidance</span>
+                  <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight text-maroon">Meet Your Coaches</h2>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-12 lg:gap-16 reveal">
+                  {/* Coach Zainab */}
+                  <div class="group bg-white p-8 md:p-12 border border-beige hover:border-maroon transition-colors duration-700 flex flex-col">
+                      <div class="mb-8 flex justify-between items-start">
+                          <h3 class="font-serif text-4xl tracking-tight text-[#4A423C]">Coach Zainab</h3>
+                      </div>
+                      <div class="mb-8">
+                          <span class="px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] border border-maroon text-maroon rounded-full bg-maroon/5">For female clients only</span>
+                      </div>
+                      <p class="font-serif italic text-2xl text-maroon mb-10 leading-snug">“Guiding women to reconnect with their body and restore internal balance.”</p>
+                      
+                      <div class="pt-8 border-t border-beige mt-auto">
+                          <span class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block mb-6">Focus Areas</span>
+                          <ul class="flex flex-wrap gap-3">
+                              <li class="px-5 py-2 bg-[#FDFBF7] border border-beige text-xs text-[#4A423C] tracking-wide">Hormonal Health</li>
+                              <li class="px-5 py-2 bg-[#FDFBF7] border border-beige text-xs text-[#4A423C] tracking-wide">Body Awareness</li>
+                              <li class="px-5 py-2 bg-[#FDFBF7] border border-beige text-xs text-[#4A423C] tracking-wide">Internal Balance</li>
+                          </ul>
+                      </div>
+                  </div>
+
+                  {/* Coach Jay */}
+                  <div class="group bg-white p-8 md:p-12 border border-beige hover:border-maroon transition-colors duration-700 flex flex-col">
+                      <div class="mb-8 flex justify-between items-start">
+                          <h3 class="font-serif text-4xl tracking-tight text-[#4A423C]">Coach Jay</h3>
+                      </div>
+                      <div class="mb-8">
+                          <span class="px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] border border-[#4A423C] text-[#4A423C] rounded-full bg-[#4A423C]/5">For male clients only</span>
+                      </div>
+                      <p class="font-serif italic text-2xl text-maroon mb-10 leading-snug">“Helping men build strength, clarity, and confidence from within.”</p>
+                      
+                      <div class="pt-8 border-t border-beige mt-auto">
+                          <span class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block mb-6">Focus Areas</span>
+                          <ul class="flex flex-wrap gap-3">
+                              <li class="px-5 py-2 bg-[#FDFBF7] border border-beige text-xs text-[#4A423C] tracking-wide">Fitness & Strength</li>
+                              <li class="px-5 py-2 bg-[#FDFBF7] border border-beige text-xs text-[#4A423C] tracking-wide">Mental Awareness</li>
+                              <li class="px-5 py-2 bg-[#FDFBF7] border border-beige text-xs text-[#4A423C] tracking-wide">Discipline & Integrity</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      {/* Free Offer / CTA Section */}
+      <section id="contact" class="py-20 md:py-40 px-6 bg-maroon text-white text-center border-y border-maroon">
+          <div class="max-w-3xl mx-auto reveal">
+              <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight mb-8 text-[#FDFBF7]">
+                  Start With a Free <br class="hidden md:block"/>15-Minute Consultation
+              </h2>
+              <p class="font-serif text-xl text-white/80 mb-14 leading-relaxed italic max-w-2xl mx-auto">
+                  Share what you have been struggling with, and we will guide you on what your body needs and how we can support you.
+              </p>
+              <a href="https://wa.link/px3xr5" class="inline-flex items-center justify-center text-maroon uppercase hover:bg-white transition-all duration-700 hover:shadow-2xl text-[10px] font-bold tracking-[0.2em] bg-[#FDFBF7] py-6 px-12">
+                  Contact on WhatsApp
+              </a>
+          </div>
+      </section>
+
+      {/* Footer Quote */}
+      <section class="py-16 md:py-24 px-6 bg-[#FDFBF7] text-center border-t border-beige">
+          <a href="https://linktr.ee/leeze" class="inline-block hover:opacity-80 transition-opacity">
+              <h2 class="text-maroon uppercase text-2xl md:text-4xl tracking-[0.2em] font-serif mb-6">LEEZE Holistic</h2>
+          </a>
+          <p class="text-xl text-[#6B615A] font-serif italic max-w-2xl mx-auto">"Supporting your body, not overriding it."</p>
+      </section>
+
+      {/* Footer */}
+      <footer class="bg-white py-16 px-6 border-t border-maroon/20">
+          <div class="max-w-6xl mx-auto flex flex-col justify-center items-center gap-10">
+              <div class="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-[0.2em] text-[#4A423C] font-bold">
+                  <a href="https://linktr.ee/leeze" class="hover:text-maroon transition-colors py-1">Linktree</a>
+                  <a href="https://www.instagram.com/leeze.holistic" class="hover:text-maroon transition-colors py-1">Instagram</a>
+                  <a href="https://www.tiktok.com/@leeze.holistic?_t=zs-8v0tjfjeamk&_r=1" class="hover:text-maroon transition-colors py-1">TikTok</a>
+                  <a href="https://wa.link/px3xr5" class="hover:text-maroon transition-colors py-1">WhatsApp</a>
+                  <a href="https://linktr.ee/leeze" class="hover:text-maroon transition-colors py-1">LinkedIn</a>
+                  <a href="https://linktr.ee/leeze" class="hover:text-maroon transition-colors py-1">YouTube</a>
+              </div>
+              <div class="w-24 h-px bg-beige"></div>
+              <div class="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] flex flex-col md:flex-row items-center gap-4">
+                  <span>© 2026 Leeze Holistic</span>
+                  <span class="hidden md:inline">•</span>
+                  <span class="text-maroon font-bold">Built for Health</span>
+              </div>
+          </div>
+      </footer>
+      
+      <!-- Chat Assistant (Removed for static HTML) -->
+    </div>
+  )
+
+<script>
+    // Menu Logic
+    const menuBtn = document.querySelector('button.md\\:hidden');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon-dynamic');
+    let isMenuOpen = false;
+    
+    // SVG icons
+    const iconMenu = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+    const iconClose = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+
+    if(menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if(isMenuOpen) {
+                mobileMenu.classList.remove('-translate-y-full');
+                mobileMenu.classList.add('translate-y-0');
+                if(menuIcon) menuIcon.innerHTML = iconClose;
+            } else {
+                mobileMenu.classList.add('-translate-y-full');
+                mobileMenu.classList.remove('translate-y-0');
+                if(menuIcon) menuIcon.innerHTML = iconMenu;
+            }
+        });
+        
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('-translate-y-full');
+                mobileMenu.classList.remove('translate-y-0');
+                if(menuIcon) menuIcon.innerHTML = iconMenu;
+            });
+        });
+    }
+
+    // Reveal Animation Logic
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-12');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+        el.classList.add('opacity-0', 'translate-y-12', 'transition-all', 'duration-[1200ms]', 'ease-out');
+        observer.observe(el);
+    });
+</script>
+</body>
+</html>
