@@ -113,11 +113,7 @@ export default function App() {
 
       {/* About Section */}
       <section className="md:px-6 md:py-40 py-32 px-6 bg-[#FDFBF7]" id="about">
-          <div className="grid md:grid-cols-2 gap-20 max-w-6xl mx-auto items-center">
-              <div className="reveal relative flex justify-center">
-                  <div className="w-3/4 aspect-[3/4] bg-center bg-[url('https://photos.app.goo.gl/bsM54PiwtrvQeebZ6')] bg-cover p-4 relative grayscale-[10%] shadow-lg">
-                  </div>
-              </div>
+          <div className="max-w-4xl mx-auto items-center text-center">
               <div className="flex flex-col gap-8 reveal">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block border-b border-beige pb-4">Our Founder</span>
                   <div className="flex flex-col gap-2">
@@ -133,9 +129,9 @@ export default function App() {
                       <p>
                         At LEEZE Holistic, true health is not forced. It is restored by aligning with the body's natural needs. I designed this premium system so you can stop guessing and start responding to what your body actually requires.
                       </p>
-                      <div className="pl-6 border-l border-maroon mt-6">
+                      <div className="md:pl-6 md:border-l border-t md:border-t-0 pt-6 md:pt-0 border-maroon mt-6 text-center md:text-left">
                           <p className="text-lg text-[#4A423C] italic">
-                              This is not about quick fixes.<br/>
+                              This is not about quick fixes.<br className="hidden md:block"/>
                               It’s about building a foundation your body can trust.
                           </p>
                       </div>
@@ -488,7 +484,6 @@ export default function App() {
               <div className="grid md:grid-cols-2 gap-12 lg:gap-16 reveal">
                   {/* Coach Zainab */}
                   <div className="group bg-white p-8 md:p-12 border border-beige hover:border-maroon transition-colors duration-700 flex flex-col">
-                      <div className="w-full aspect-square bg-[#FDFBF7] bg-center bg-cover bg-[url(https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800)] grayscale-[20%] mb-10 border border-beige"></div>
                       <div className="mb-8 flex justify-between items-start">
                           <h3 className="font-serif text-4xl tracking-tight text-[#4A423C]">Coach Zainab</h3>
                       </div>
@@ -509,7 +504,6 @@ export default function App() {
 
                   {/* Coach Jay */}
                   <div className="group bg-white p-8 md:p-12 border border-beige hover:border-maroon transition-colors duration-700 flex flex-col">
-                      <div className="w-full aspect-square bg-[#FDFBF7] bg-center bg-cover bg-[url(https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800)] grayscale-[20%] mb-10 border border-beige"></div>
                       <div className="mb-8 flex justify-between items-start">
                           <h3 className="font-serif text-4xl tracking-tight text-[#4A423C]">Coach Jay</h3>
                       </div>
