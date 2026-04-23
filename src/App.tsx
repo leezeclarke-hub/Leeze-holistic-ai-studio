@@ -39,9 +39,9 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed w-full top-0 z-50 h-20 px-6 md:px-12 flex items-center justify-between border-b border-beige bg-white/50 backdrop-blur-sm shrink-0 transition-all duration-500">
           <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
-              <div className="text-maroon uppercase text-xl tracking-[0.2em] font-serif cursor-pointer" onClick={() => window.location.href='https://linktr.ee/leeze'} role="button">
+              <a href="https://linktr.ee/leeze" className="text-maroon uppercase text-xl tracking-[0.2em] font-serif hover:opacity-80 transition-opacity">
                 Leeze <span className="font-light opacity-70">Holistic</span>
-              </div>
+              </a>
               <div className="hidden md:flex items-center gap-10 text-[10px] uppercase tracking-[0.15em] font-semibold text-[#6B615A]">
                   <a href="#about" className="hover:text-maroon transition-colors duration-500">About</a>
                   <a href="#method" className="hover:text-maroon transition-colors duration-500">Method</a>
@@ -542,7 +542,9 @@ export default function App() {
 
       {/* Footer Quote */}
       <section className="py-24 px-6 bg-[#FDFBF7] text-center border-t border-beige">
-          <h2 className="text-maroon uppercase text-4xl tracking-[0.2em] font-serif mb-6">LEEZE Holistic</h2>
+          <a href="https://linktr.ee/leeze" className="inline-block hover:opacity-80 transition-opacity">
+              <h2 className="text-maroon uppercase text-4xl tracking-[0.2em] font-serif mb-6">LEEZE Holistic</h2>
+          </a>
           <p className="text-xl text-[#6B615A] font-serif italic max-w-2xl mx-auto">"Supporting your body, not overriding it."</p>
       </section>
 
@@ -550,13 +552,12 @@ export default function App() {
       <footer className="bg-white py-16 px-6 border-t border-maroon/20">
           <div className="max-w-6xl mx-auto flex flex-col justify-center items-center gap-10">
               <div className="flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-[0.2em] text-[#4A423C] font-bold">
-                  <a href="https://linktr.ee/leeze" className="hover:text-maroon transition-colors py-1">Instagram</a>
-                  <a href="https://tiktok.com" className="hover:text-maroon transition-colors py-1">TikTok</a>
-                  <a href="https://wa.link/gwlgym" className="hover:text-maroon transition-colors py-1">WhatsApp</a>
-                  <a href="https://telegram.org" className="hover:text-maroon transition-colors py-1">Telegram</a>
-                  <a href="https://linkedin.com" className="hover:text-maroon transition-colors py-1">LinkedIn</a>
-                  <a href="https://youtube.com" className="hover:text-maroon transition-colors py-1">YouTube</a>
                   <a href="https://linktr.ee/leeze" className="hover:text-maroon transition-colors py-1">Linktree</a>
+                  <a href="https://www.instagram.com/leeze.holistic" className="hover:text-maroon transition-colors py-1">Instagram</a>
+                  <a href="https://www.tiktok.com/@leeze.holistic?_t=zs-8v0tjfjeamk&_r=1" className="hover:text-maroon transition-colors py-1">TikTok</a>
+                  <a href="https://wa.link/px3xr5" className="hover:text-maroon transition-colors py-1">WhatsApp</a>
+                  <a href="https://linktr.ee/leeze" className="hover:text-maroon transition-colors py-1">LinkedIn</a>
+                  <a href="https://linktr.ee/leeze" className="hover:text-maroon transition-colors py-1">YouTube</a>
               </div>
               <div className="w-24 h-px bg-beige"></div>
               <div className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] flex flex-col md:flex-row items-center gap-4">
