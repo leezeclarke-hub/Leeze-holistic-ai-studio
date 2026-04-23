@@ -103,21 +103,21 @@ export default function App() {
       </section>
 
       {/* High-Conversion Line */}
-      <section className="w-full bg-white py-24 px-6 border-y border-beige relative overflow-hidden reveal">
+      <section className="w-full bg-white py-16 md:py-24 px-6 border-y border-beige relative overflow-hidden reveal">
           <div className="max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-8 bg-[#FDFBF7] border border-beige">
-              <p className="md:text-4xl leading-relaxed text-3xl font-light italic text-maroon font-serif mb-0">
+              <p className="md:text-4xl leading-relaxed text-2xl font-light italic text-maroon font-serif mb-0">
                 "Most women don’t lack knowledge, they lack the right structure and support."
               </p>
           </div>
       </section>
 
       {/* About Section */}
-      <section className="md:px-6 md:py-40 py-32 px-6 bg-[#FDFBF7]" id="about">
+      <section className="md:px-6 md:py-40 py-20 md:py-32 px-6 bg-[#FDFBF7]" id="about">
           <div className="max-w-4xl mx-auto items-center text-center">
               <div className="flex flex-col gap-8 reveal">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block border-b border-beige pb-4">Our Founder</span>
                   <div className="flex flex-col gap-2">
-                    <h2 className="md:text-5xl text-maroon leading-tight text-4xl tracking-tight font-serif">
+                    <h2 className="md:text-5xl text-maroon leading-tight text-3xl md:text-4xl tracking-tight font-serif">
                       Coach Zainab
                     </h2>
                     <span className="text-[10px] uppercase tracking-widest text-[#4A423C] font-semibold">Nutritionist & Certified Health Coach</span>
@@ -141,11 +141,11 @@ export default function App() {
       </section>
 
       {/* Signature Method Section */}
-      <section id="method" className="py-32 md:py-48 px-6 bg-[#FDFBF7] border-y border-beige">
+      <section id="method" className="py-20 md:py-40 px-6 bg-[#FDFBF7] border-y border-beige">
           <div className="max-w-6xl mx-auto">
               <div className="text-center mb-20 md:mb-32 reveal">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] block mb-6">Our Signature Approach</span>
-                  <h2 className="font-serif text-4xl md:text-6xl tracking-tight text-maroon mb-8">The LEEZE Regulation Method</h2>
+                  <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight text-maroon mb-8">The LEEZE Regulation Method</h2>
                   <p className="text-lg font-serif text-[#6B615A] max-w-2xl mx-auto">
                       A structured 3-phase system designed to guide your body back into balance with precision and elegance.
                   </p>
@@ -253,10 +253,10 @@ export default function App() {
       </section>
 
       {/* How You Work With Us */}
-      <section className="py-32 md:py-48 px-6 bg-white relative">
+      <section className="py-20 md:py-40 px-6 bg-white relative">
           <div className="max-w-4xl mx-auto">
               <div className="text-center mb-24 reveal">
-                  <h2 className="md:text-6xl text-maroon text-4xl tracking-tight font-serif mb-6">How You Work With Us</h2>
+                  <h2 className="md:text-6xl text-maroon text-3xl md:text-4xl tracking-tight font-serif mb-6">How You Work With Us</h2>
               </div>
 
               <div className="relative space-y-12">
@@ -305,11 +305,11 @@ export default function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 md:py-48 px-6 bg-[#F4F0E6] border-y border-beige">
+      <section id="services" className="py-20 md:py-40 px-6 bg-[#F4F0E6] border-y border-beige">
           <div className="max-w-5xl mx-auto">
               
               <div className="text-center mb-24 reveal">
-                  <h2 className="font-serif text-4xl md:text-6xl tracking-tight text-[#4A423C]">Our Services</h2>
+                  <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight text-[#4A423C]">Our Services</h2>
               </div>
 
               {/* Featured Service */}
@@ -385,82 +385,82 @@ export default function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-32 bg-white overflow-hidden border-b border-beige">
+      <section className="py-20 md:py-32 bg-white overflow-hidden border-b border-beige">
           <div className="text-center mb-24 reveal">
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] mb-6 block">Client Stories</span>
-              <h2 className="font-serif text-4xl md:text-6xl tracking-tight text-maroon">Words From Our Community</h2>
+              <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight text-maroon">Words From Our Community</h2>
           </div>
           
           <div className="relative w-full">
               <div className="marquee-container gap-8 px-4">
                   {/* Set 1 */}
                   <div className="flex gap-8">
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"You are talented, I learned so much from you, your presentation and influence is great. I learn from your passion in practicing in your lifestyle. Thank you Coach"</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Susan A. (Atomy Center Leader)</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"You are talented, I learned so much from you, your presentation and influence is great. I learn from your passion in practicing in your lifestyle. Thank you Coach"</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Susan A. (Atomy Center Leader)</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Coach Zainab inspired me to start my healthy eating habit. I usually struggle a lot with being consistent especially I am selective and sensitive when it comes to food changes or trying new meals outside my culture. Each time I have a session with her I get super excited at how she takes me through the process."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Umami F.</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Coach Zainab inspired me to start my healthy eating habit. I usually struggle a lot with being consistent especially I am selective and sensitive when it comes to food changes or trying new meals outside my culture. Each time I have a session with her I get super excited at how she takes me through the process."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Umami F.</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"The cleanse protocol is amazing! I feel so much lighter and more energy. Thank you so much for the guidance! Jazak Allah khair. I told my mom, my cousins and my friends to join as this is sooo good mashaAllah"</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Noor H.</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"The cleanse protocol is amazing! I feel so much lighter and more energy. Thank you so much for the guidance! Jazak Allah khair. I told my mom, my cousins and my friends to join as this is sooo good mashaAllah"</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Noor H.</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I expected general health advice, something I genuinely needed. What I received, however, was so much more. Coach Zainab created a warm, encouraging, and attentive space where I was able to engage in deep introspection and self-discovery."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Sarah M. (English Tutor)</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I expected general health advice, something I genuinely needed. What I received, however, was so much more. Coach Zainab created a warm, encouraging, and attentive space where I was able to engage in deep introspection and self-discovery."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Sarah M. (English Tutor)</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I want to appreciate you Coach Zainab for helping me and changing my way of life/living/view, JUST EVERYTHING. You are the greatest influence that have ever happened to me."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Salma M. (Dentist)</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I want to appreciate you Coach Zainab for helping me and changing my way of life/living/view, JUST EVERYTHING. You are the greatest influence that have ever happened to me."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Salma M. (Dentist)</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Thank you for the inspiring coaching. I’ve learned so much, and I know this journey is just the beginning. Conversations like these help me see things differently and reconnect with myself, my health, my habits, and my daily routine."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Darya K. (Model @darya.ionic)</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Thank you for the inspiring coaching. I’ve learned so much, and I know this journey is just the beginning. Conversations like these help me see things differently and reconnect with myself, my health, my habits, and my daily routine."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Darya K. (Model @darya.ionic)</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Coach Jay helped me build physical strength and mental clarity. Highly recommend the LEEZE method."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Shafiq R.</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Coach Jay helped me build physical strength and mental clarity. Highly recommend the LEEZE method."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Shafiq R.</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I had no idea what holistic was back then. Now I am starting to follow holistic approaches."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Clarissa H.</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I had no idea what holistic was back then. Now I am starting to follow holistic approaches."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Clarissa H.</p>
                       </div>
                   </div>
                   {/* Set 2 (Duplicate for continuous scroll) */}
                   <div className="flex gap-8">
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"You are talented, I learned so much from you, your presentation and influence is great. I learn from your passion in practicing in your lifestyle. Thank you Coach"</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Susan A. (Atomy Center Leader)</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"You are talented, I learned so much from you, your presentation and influence is great. I learn from your passion in practicing in your lifestyle. Thank you Coach"</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Susan A. (Atomy Center Leader)</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Coach Zainab inspired me to start my healthy eating habit. I usually struggle a lot with being consistent especially I am selective and sensitive when it comes to food changes or trying new meals outside my culture. Each time I have a session with her I get super excited at how she takes me through the process."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Umami F.</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Coach Zainab inspired me to start my healthy eating habit. I usually struggle a lot with being consistent especially I am selective and sensitive when it comes to food changes or trying new meals outside my culture. Each time I have a session with her I get super excited at how she takes me through the process."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Umami F.</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"The cleanse protocol is amazing! I feel so much lighter and more energy. Thank you so much for the guidance! Jazak Allah khair. I told my mom, my cousins and my friends to join as this is sooo good mashaAllah"</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Noor H.</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"The cleanse protocol is amazing! I feel so much lighter and more energy. Thank you so much for the guidance! Jazak Allah khair. I told my mom, my cousins and my friends to join as this is sooo good mashaAllah"</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Noor H.</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I expected general health advice, something I genuinely needed. What I received, however, was so much more. Coach Zainab created a warm, encouraging, and attentive space where I was able to engage in deep introspection and self-discovery."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Sarah M. (English Tutor)</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I expected general health advice, something I genuinely needed. What I received, however, was so much more. Coach Zainab created a warm, encouraging, and attentive space where I was able to engage in deep introspection and self-discovery."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Sarah M. (English Tutor)</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I want to appreciate you Coach Zainab for helping me and changing my way of life/living/view, JUST EVERYTHING. You are the greatest influence that have ever happened to me."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Salma M. (Dentist)</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I want to appreciate you Coach Zainab for helping me and changing my way of life/living/view, JUST EVERYTHING. You are the greatest influence that have ever happened to me."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Salma M. (Dentist)</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Thank you for the inspiring coaching. I’ve learned so much, and I know this journey is just the beginning. Conversations like these help me see things differently and reconnect with myself, my health, my habits, and my daily routine."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Darya K. (Model @darya.ionic)</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Thank you for the inspiring coaching. I’ve learned so much, and I know this journey is just the beginning. Conversations like these help me see things differently and reconnect with myself, my health, my habits, and my daily routine."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Darya K. (Model @darya.ionic)</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"Coach Jay helped me build physical strength and mental clarity. Highly recommend the LEEZE method."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Shafiq R.</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"Coach Jay helped me build physical strength and mental clarity. Highly recommend the LEEZE method."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Shafiq R.</p>
                       </div>
-                      <div className="w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-12 border border-beige flex flex-col justify-between">
-                          <p className="font-serif text-xl text-[#4A423C] leading-relaxed italic mb-10">"I had no idea what holistic was back then. Now I am starting to follow holistic approaches."</p>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-6">Clarissa H.</p>
+                      <div className="w-[85vw] sm:w-[350px] md:w-[450px] flex-none bg-[#FDFBF7] p-8 md:p-12 border border-beige flex flex-col justify-between">
+                          <p className="font-serif text-lg md:text-xl text-[#4A423C] leading-relaxed italic mb-6 md:mb-10">"I had no idea what holistic was back then. Now I am starting to follow holistic approaches."</p>
+                          <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] border-t border-beige pt-4 md:pt-6">Clarissa H.</p>
                       </div>
                   </div>
               </div>
@@ -474,11 +474,11 @@ export default function App() {
       </section>
 
       {/* Coaches Section */}
-      <section id="coaches" className="py-32 md:py-48 px-6 bg-[#FDFBF7]">
+      <section id="coaches" className="py-20 md:py-40 px-6 bg-[#FDFBF7]">
           <div className="max-w-6xl mx-auto">
               <div className="text-center mb-24 reveal">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B615A] mb-6 block">Expert Guidance</span>
-                  <h2 className="font-serif text-4xl md:text-6xl tracking-tight text-maroon">Meet Your Coaches</h2>
+                  <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight text-maroon">Meet Your Coaches</h2>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12 lg:gap-16 reveal">
@@ -526,9 +526,9 @@ export default function App() {
       </section>
 
       {/* Free Offer / CTA Section */}
-      <section id="contact" className="py-32 md:py-40 px-6 bg-maroon text-white text-center border-y border-maroon">
+      <section id="contact" className="py-20 md:py-40 px-6 bg-maroon text-white text-center border-y border-maroon">
           <div className="max-w-3xl mx-auto reveal">
-              <h2 className="font-serif text-4xl md:text-6xl tracking-tight mb-8 text-[#FDFBF7]">
+              <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight mb-8 text-[#FDFBF7]">
                   Start With a Free <br className="hidden md:block"/>15-Minute Consultation
               </h2>
               <p className="font-serif text-xl text-white/80 mb-14 leading-relaxed italic max-w-2xl mx-auto">
@@ -541,9 +541,9 @@ export default function App() {
       </section>
 
       {/* Footer Quote */}
-      <section className="py-24 px-6 bg-[#FDFBF7] text-center border-t border-beige">
+      <section className="py-16 md:py-24 px-6 bg-[#FDFBF7] text-center border-t border-beige">
           <a href="https://linktr.ee/leeze" className="inline-block hover:opacity-80 transition-opacity">
-              <h2 className="text-maroon uppercase text-4xl tracking-[0.2em] font-serif mb-6">LEEZE Holistic</h2>
+              <h2 className="text-maroon uppercase text-2xl md:text-4xl tracking-[0.2em] font-serif mb-6">LEEZE Holistic</h2>
           </a>
           <p className="text-xl text-[#6B615A] font-serif italic max-w-2xl mx-auto">"Supporting your body, not overriding it."</p>
       </section>
