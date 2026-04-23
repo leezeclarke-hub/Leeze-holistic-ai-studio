@@ -5,7 +5,7 @@
 
 import React, { useEffect, useState } from 'react';
 import ChatAssistant from './components/ChatAssistant';
-import { Leaf, ArrowRight, Menu, Globe, Phone, Info, Play, X } from 'lucide-react';
+import { Leaf, ArrowRight, Menu, Globe, Phone, Info, X } from 'lucide-react';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -111,23 +111,11 @@ export default function App() {
           </div>
       </section>
 
-      {/* Introductory Video Section */}
-      <section className="py-24 px-6 bg-white border-b border-beige">
-          <div className="max-w-5xl mx-auto reveal">
-              <div className="aspect-video w-full bg-[#EBE5D9] border border-beige flex items-center justify-center relative group cursor-pointer overflow-hidden shadow-sm">
-                  <div className="absolute inset-0 bg-maroon/5 group-hover:bg-maroon/10 transition-colors duration-700"></div>
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl text-maroon transform group-hover:scale-110 transition-transform duration-700">
-                      <Play size={32} className="ml-2" />
-                  </div>
-              </div>
-          </div>
-      </section>
-
       {/* About Section */}
       <section className="md:px-6 md:py-40 py-32 px-6 bg-[#FDFBF7]" id="about">
           <div className="grid md:grid-cols-2 gap-20 max-w-6xl mx-auto items-center">
               <div className="reveal relative flex justify-center">
-                  <div className="w-3/4 aspect-[3/4] bg-center bg-[url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop)] bg-cover p-4 relative grayscale-[10%] shadow-lg">
+                  <div className="w-3/4 aspect-[3/4] bg-center bg-[url('https://photos.app.goo.gl/bsM54PiwtrvQeebZ6')] bg-cover p-4 relative grayscale-[10%] shadow-lg">
                   </div>
               </div>
               <div className="flex flex-col gap-8 reveal">
@@ -347,19 +335,15 @@ export default function App() {
                           <p className="text-[10px] uppercase tracking-[0.2em] text-[#4A423C] mb-8">This includes support with:</p>
                           <div className="grid grid-cols-1 md:grid-cols-4 gap-0 border-y border-beige divide-y md:divide-y-0 md:divide-x divide-beige bg-[#FDFBF7]">
                               <div className="py-8 px-4 flex gap-3 items-center justify-center">
-                                  <div className="w-1 h-1 rounded-full bg-maroon hidden md:block"></div>
                                   <span className="font-serif text-xl tracking-tight text-[#4A423C]">Stress & Burnout</span>
                               </div>
                               <div className="py-8 px-4 flex gap-3 items-center justify-center">
-                                  <div className="w-1 h-1 rounded-full bg-maroon hidden md:block"></div>
                                   <span className="font-serif text-xl tracking-tight text-[#4A423C]">Hormonal Imbalance</span>
                               </div>
                               <div className="py-8 px-4 flex gap-3 items-center justify-center">
-                                  <div className="w-1 h-1 rounded-full bg-maroon hidden md:block"></div>
                                   <span className="font-serif text-xl tracking-tight text-[#4A423C]">Energy & Metabolism</span>
                               </div>
                               <div className="py-8 px-4 flex gap-3 items-center justify-center">
-                                  <div className="w-1 h-1 rounded-full bg-maroon hidden md:block"></div>
                                   <span className="font-serif text-xl tracking-tight text-[#4A423C]">Gut & Liver Health</span>
                               </div>
                           </div>
